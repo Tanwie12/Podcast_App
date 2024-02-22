@@ -1,0 +1,18 @@
+{
+  "commands": {
+    "refactor": {
+      "prompt": "clean the code",
+      "context": {
+        "codebase": false,
+        "selection": true
+      }
+    },
+    "clean": {
+      "prompt": "clean the code",
+      "context": {
+        "codebase": false,
+        "selection": true
+      }
+    }
+  }
+}

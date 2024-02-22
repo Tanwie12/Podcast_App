@@ -10,7 +10,10 @@ import { useSelector } from "react-redux";
 import { Sidebar } from "./components/Sidebar";
 import { MobileDrawer } from "./components/MobileDrawer";
 import NavBar, { NavBar1 } from "./components/Navbar";
-import Login from "./components/Signin";
+import Login, { LoginCard } from "./components/Signin";
+import { BrowserRouter } from "react-router-dom";
+import Signup from "./components/Signup";
+
 
 export default function App() {
 
@@ -24,17 +27,25 @@ export default function App() {
       
       {/* Apply theme class to outer div */}
       <div className={Theme}>
-
-        <div className="dark:bg-dark overflow-hidden h-screen bg-light flex pt-2">
-          
-         {/* display on large screens */}
-      <div className="hidden lg:flex">
-      <Sidebar />
-      </div>
-<NavBar1/>
+        <BrowserRouter>
+        <div className=" dark:bg-dark w-screen h-screen flex overflow-x-hidden overflow-y-hidden bg-light">
+          <Sidebar/>
+        <div className="flex-1 h-auto  border border-indigo-600  pe-5">
+         <NavBar1/>
+         <div className=" mt-1  flex border border-indigo-700 justify-center">
+        <div className=" mt-5 flex justify-center items-center">
+        {/* <LoginCard/> */}
+        <Signup/>
         </div>
+         </div>
+       
+        </div>
+        
       </div>
-<Login/>
+      </BrowserRouter>
+        </div>
+      
+     
     </NextUIProvider>
   );
 }

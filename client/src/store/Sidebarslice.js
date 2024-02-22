@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // side bar change value
 const initialState = {
-    value: false,
+    value: true,
 }
 
 

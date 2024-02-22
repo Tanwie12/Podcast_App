@@ -9,6 +9,8 @@ import ThemeSwitcher from "./utils/theme/ThemeSwitcher";
 import { useSelector } from "react-redux";
 import { Sidebar } from "./components/Sidebar";
 import { MobileDrawer } from "./components/MobileDrawer";
+import NavBar, { NavBar1 } from "./components/Navbar";
+import Login from "./components/Signin";
 
 export default function App() {
 
@@ -23,20 +25,16 @@ export default function App() {
       {/* Apply theme class to outer div */}
       <div className={Theme}>
 
-        <div className="dark:bg-dark overflow-hidden h-screen bg-light flex">
+        <div className="dark:bg-dark overflow-hidden h-screen bg-light flex pt-2">
+          
          {/* display on large screens */}
       <div className="hidden lg:flex">
       <Sidebar />
-        <div className=" w-10"></div>
-      <DrawerDefault />
       </div>
-      {/* side for mobile devices */}
-<div className="lg:hidden block">
-  <MobileDrawer/>
-</div>
+<NavBar1/>
         </div>
       </div>
-
+<Login/>
     </NextUIProvider>
   );
 }

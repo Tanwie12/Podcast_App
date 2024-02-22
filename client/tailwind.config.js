@@ -29,7 +29,14 @@ module.exports = withMT({
     text_primary:"#F2F3F4",
     text_secondary:"#b1b2b3",
     card:"#121212",
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif']
+      },
+      boxShadow: {
+        '5xl': '20px 20px 50px rgba(0, 0, 0, 0.5)',
       }
+
     },
   },
   darkMode: "class",

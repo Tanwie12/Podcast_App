@@ -1,50 +1,71 @@
 import React from "react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
-import { MagnifyingGlassPlusIcon as MailIcon } from "@heroicons/react/24/solid";
-
-export default function App() {
+import {LockClosedIcon, EnvelopeIcon, MagnifyingGlassPlusIcon as MailIcon } from "@heroicons/react/24/solid";
+import { LockIcon } from "./LockIcon";
+import { Button as MButton } from "@material-tailwind/react";
+import { Typography } from "@mui/material";
+export default function Signup() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
+  const [modalPlacement, setModalPlacement] = React.useState("auto");
   return (
     <>
-      <Button onPress={onOpen} color="primary">Open Modal</Button>
+      <Typography
+              as="a"
+              href="#signup"
+              variant="small"
+              color="blue-gray"
+              className="ml-1 font-bold"
+              onClick={onOpen}
+            >
+              Sign up
+            </Typography>
       <Modal 
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
-        placement="top-center"
+        placement="center"
       >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Sign Up</ModalHeader>
               <ModalBody>
                 <Input
-                  autoFocus
-                  endContent={
-                    <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                  }
+                autoFocus
+                endContent={
+                  <EnvelopeIcon className=" w-5 h-5 text-default-400 pointer-events-none flex-shrink-0" />
+                }
                   label="Email"
                   placeholder="Enter your email"
                   variant="bordered"
                 />
                 <Input
-                  
+                  endContent={
+                    <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
                   label="Password"
                   placeholder="Enter your password"
                   type="password"
                   variant="bordered"
                 />
+                <Input
+                  endContent={
+                    <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
+                  label="Password"
+                  placeholder="Reapeat  your password"
+                  type="password"
+                  variant="bordered"
+                />
                 <div className="flex py-2 px-1 justify-between">
-                  <Checkbox
-                    classNames={{
-                      label: "text-small",
-                    }}
-                  >
-                    Remember me
-                  </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Forgot password?
-                  </Link>
+                <Button
+        size="lg"
+        variant="flat"
+        color="primary"
+        className="flex items-center gap-3"
+      >
+        <img src="https://docs.material-tailwind.com/icons/google.svg" alt="metamask" className="h-6 w-6" />
+        Continue with Google
+      </Button>
                 </div>
               </ModalBody>
               <ModalFooter>

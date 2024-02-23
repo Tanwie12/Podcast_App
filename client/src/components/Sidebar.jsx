@@ -29,7 +29,7 @@ console.log(sidebarvalue+"for real")
   return (
     <>
       <Card
-        className={`h-[calc(100vh-2rem)] w-full text-blue-600 max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 ${
+        className={`h-[calc(100vh-2rem)] w-0 md:w-full md:p-4 text-blue-600 max-w-[20rem]   shadow-xl shadow-blue-gray-900/5 ${
           sidebarvalue ? "" : "hidden"
         }`}
       >

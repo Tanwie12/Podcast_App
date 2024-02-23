@@ -30,14 +30,18 @@ export default function App() {
         <BrowserRouter>
         <div className=" dark:bg-dark w-screen h-screen flex overflow-x-hidden overflow-y-hidden bg-light">
           <Sidebar/>
-        <div className="flex-1 h-auto  border border-indigo-600  pe-5">
-         <NavBar1/>
-         <div className=" mt-1  flex border border-indigo-700 justify-center">
-        <div className=" mt-5 flex justify-center items-center">
-        {/* <LoginCard/> */}
-        <Signup/>
+        <div className="flex-1 h-auto   border border-green-200">
+          <div className=" md:mr-5 mr-8">
+          <NavBar1/>
+          </div>
+        {/* components section, where components will be rendered  */}
+        <div className="border border-blue-400 flex justify-center">
+          {/* each individual componeent here for its rendering in it's own div  */}
+        <div className=" mt-10 md:flex justify-center md:w-1/2 px-4 border item-center border-red-400">
+        <LoginCard/>
         </div>
-         </div>
+        </div>
+         
        
         </div>
         

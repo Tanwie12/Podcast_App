@@ -12,14 +12,9 @@ import { Link, Button as NButton } from "@nextui-org/react";
 import { DrawerDefault } from "./Drawerbar";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 export function NavBar1() {
-  const [openNav, setOpenNav] = React.useState(false);
  
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
-    );
-  }, []);
+ 
+  
  
  
   return (

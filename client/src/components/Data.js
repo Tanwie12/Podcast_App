@@ -1,28 +1,64 @@
-import React from "react";
-export const animals = [
-  {label: "Cat", value: "cat", description: "The second most popular pet in the world"},
-  {label: "Dog", value: "dog", description: "The most popular pet in the world"},
-  {label: "Elephant", value: "elephant", description: "The largest land animal"},
-  {label: "Lion", value: "lion", description: "The king of the jungle"},
-  {label: "Tiger", value: "tiger", description: "The largest cat species"},
-  {label: "Giraffe", value: "giraffe", description: "The tallest land animal"},
-  {
-    label: "Dolphin",
-    value: "dolphin",
-    description: "A widely distributed and diverse group of aquatic mammals",
-  },
-  {label: "Penguin", value: "penguin", description: "A group of aquatic flightless birds"},
-  {label: "Zebra", value: "zebra", description: "A several species of African equids"},
-  {
-    label: "Shark",
-    value: "shark",
-    description: "A group of elasmobranch fish characterized by a cartilaginous skeleton",
-  },
-  {
-    label: "Whale",
-    value: "whale",
-    description: "Diverse group of fully aquatic placental marine mammals",
-  },
-  {label: "Otter", value: "otter", description: "A carnivorous mammal in the subfamily Lutrinae"},
-  {label: "Crocodile", value: "crocodile", description: "A large semiaquatic reptile"},
+import { nanoid } from "@reduxjs/toolkit";
+
+const columns = [
+  {name: "DATE", uid: "date"},
+  {name: "STUDENT", uid: "name"},
+  {name: "CLASS", uid: "class"},
+  {name: "STATUS", uid: "status"},
+  {name: "ACTIONS", uid: "actions"},
 ];
+
+const users = [
+  {
+    id: nanoid(),
+    date:"12/04/24",
+    name: "Tony Reichert",
+    class: "F1",
+    status: "current",
+    age: "29",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+   
+  },
+  {
+    id: nanoid(),
+    date:"12/04/24",
+    name: "Zoey Lang",
+    class: "F4",
+    status: "Former",
+    age: "25",
+    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    
+  },
+  {
+    id: 3,
+    date:"12/04/24",
+    name: "Jane Fisher",
+    class: "F1",
+    status: "current",
+    age: "22",
+    avatar: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+  
+  },
+  {
+    id: nanoid(),
+    date:"12/04/24",
+    name: "William Howard",
+    class: "F2",
+    status: "Former",
+    age: "28",
+    avatar: "https://i.pravatar.cc/150?u=a048581f4e29026701d",
+   
+  },
+  {
+    id: nanoid(),
+    date:"12/04/24",
+    name: "Kristen Copper",
+    class: "F3",
+    status: "current",
+    age: "24",
+    avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
+    
+  },
+];
+
+export {columns, users};

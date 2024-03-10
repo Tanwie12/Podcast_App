@@ -17,6 +17,7 @@ import Dashboard from "./pages/Dashboard";
 import Podcast from "./pages/Podcast";
 import { Favorite } from "@mui/icons-material";
 import Favorites from "./pages/Favorites";
+import Search from "./pages/Search";
 
 
 
@@ -44,7 +45,8 @@ export default function App() {
           {/* <Podcast/> */}
           
         {/* components section, where components will be rendered  */}
-        <Dashboard/>
+        {/* <Dashboard/> */}
+        <Search/>
      {/* <Favorites/> */}
         <div className="border border-blue-400 flex justify-center">
           {/* each individual componeent here for its rendering in it's own div  */}

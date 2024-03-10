@@ -166,9 +166,76 @@ const Favorites=[{
     views: "100 views",
 },
 ]
+const Categories=[{
 
+        title: "Culture",
+        img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
 
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1489696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
 
+    title: "NEWS",
+    img: "https://images.unsplash.com/photo-1495696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499626010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1492696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+{
+
+    title: "Sports",
+    img: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+},
+
+]
+
+// CATERGORIES SLICE
+ 
+    const categoriesSlice = createSlice({
+        name: 'categories', 
+        initialState: { Categories },    
+        reducers: { 
+            Updatecard: (state, action) => {
+                state.cardData = action.payload;
+            }
+        }
+
+        })
 
 //sport slice
 const sportSlice = createSlice({
@@ -268,6 +335,7 @@ const sideBarSlice = createSlice({
     export const selectCrime = state => state.crime.Crime;
     export const selectSport = state => state.sport.Sport;
     export const selectFavorites=state=>state.favorite.Favorites
+    export const selectCategories=state=>state.categories.Categories
     export const selectSideBar = state => state.sidebar.value;
     export const sideBarReducer= sideBarSlice.reducer;
     export const cardReducer= cardSlice.reducer;
@@ -277,5 +345,6 @@ const sideBarSlice = createSlice({
     export const crimeReducer= crimeSlice.reducer;
     export const sportReducer= sportSlice.reducer;
     export const favoriteReducer=favoriteSlice.reducer;
+    export const cateoriesReducer=categoriesSlice.reducer;
 
   console.log(selectCard)

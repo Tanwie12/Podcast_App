@@ -1,23 +1,23 @@
 import React from "react"; 
-
+import { Route, Routes } from "react-router-dom";
 // Import NextUI components and hooks
 import { NextUIProvider } from "@nextui-org/react";
-import { DrawerDefault } from "./components/Drawerbar";
 
-// Import custom components
-import ThemeSwitcher from "./utils/theme/ThemeSwitcher";
+
+
 import { useSelector } from "react-redux";
 import { Sidebar } from "./components/Sidebar";
-import { MobileDrawer } from "./components/MobileDrawer";
-import NavBar, { NavBar1 } from "./components/Navbar";
-import Login, { LoginCard } from "./components/Signin";
+
+import { NavBar1 } from "./components/Navbar";
+import  { LoginCard } from "./components/Signin";
 import { BrowserRouter } from "react-router-dom";
-import Signup from "./components/Signup";
+
 import Dashboard from "./pages/Dashboard";
 import Podcast from "./pages/Podcast";
-import { Favorite } from "@mui/icons-material";
+
 import Favorites from "./pages/Favorites";
 import Search from "./pages/Search";
+
 
 
 
@@ -41,18 +41,23 @@ export default function App() {
           <div className="  md:mr-5 mr-8">
           <NavBar1/>
           </div>
-        
-          {/* <Podcast/> */}
+        <Routes>
+          <Route index element={<Dashboard/>}/> 
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/podcast" element={<Podcast/>}/>
+        <Route path="/favorites" element={<Favorites/>}/>
+        <Route path="/search" element={<Search/>}/>
+        </Routes>
           
-        {/* components section, where components will be rendered  */}
-        {/* <Dashboard/> */}
-        <Search/>
-     {/* <Favorites/> */}
-        <div className="border border-blue-400 flex justify-center">
+        <div className=" flex justify-center">
           {/* each individual componeent here for its rendering in it's own div  */}
   
-        <div className=" mt-10 md:flex justify-center md:w-1/2 px-4 border item-center border-red-400">
-        {/* <LoginCard/> */}
+        <div className=" mt-10 md:flex justify-center md:w-1/2 px-4 item-center">
+       <Routes>
+       <Route path="/login" element={<LoginCard/>} />
+       </Routes>
+        
+       
         
         </div>
         </div>

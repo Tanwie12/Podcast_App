@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { IconButton, Typography, List, ListItem, ListItemPrefix, Drawer, Card } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon, PresentationChartBarIcon, MagnifyingGlassCircleIcon, StarIcon, ArrowUpOnSquareIcon, SunIcon, MoonIcon, ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import ThemeSwitcher from "../utils/theme/ThemeSwitcher";
+import { Link } from "react-router-dom";
+
 
 export function MobileDrawer() {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -31,19 +33,27 @@ export function MobileDrawer() {
               <ListItemPrefix>
                 <PresentationChartBarIcon className="h-5 w-5" />
               </ListItemPrefix>
-              Dashboard
-            </ListItem>
-            <ListItem>
-              <ListItemPrefix>
-                <MagnifyingGlassCircleIcon className="h-5 w-5" />
-              </ListItemPrefix>
-              Search
-            </ListItem>
-            <ListItem>
-              <ListItemPrefix>
-                <StarIcon className="h-5 w-5" />
-              </ListItemPrefix>
-              Favorites
+              <Link to="/dashboard">
+            Dashboard
+            </Link>
+          </ListItem>
+          <ListItem>
+            <ListItemPrefix>
+              <MagnifyingGlassCircleIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            <Link to="/search">
+            Search
+            </Link>
+           
+          </ListItem>
+
+          <ListItem>
+            <ListItemPrefix>
+              <StarIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            <Link to="/favorites">
+            Favorites
+            </Link>
             </ListItem>
             <hr className="my-2 border-blue-gray-50" />
             <ListItem>

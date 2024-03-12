@@ -8,12 +8,14 @@ import {
   Card,
   
 } from "@material-tailwind/react";
-import { Link, Button as NButton } from "@nextui-org/react";
+import {  Button as NButton } from "@nextui-org/react";
 import { DrawerDefault } from "./Drawerbar";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
+import { LoginCard } from "./Signin";
+import { Outlet,Link } from "react-router-dom";
+
 export function NavBar1() {
- 
- 
+
   
  
  
@@ -34,7 +36,11 @@ export function NavBar1() {
               
               <NButton as={Link} color="primary" href="#" variant="flat">
                 <UserCircleIcon className="h-5 w-5"/>
-           Login
+                <Link to="/login">
+            Login
+            </Link>
+                
+          
           </NButton>
             </div>
             
@@ -42,7 +48,7 @@ export function NavBar1() {
         </div>
        
       </Navbar>
-     
+     <Outlet/>
     </div>
   );
 }

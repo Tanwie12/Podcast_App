@@ -15,7 +15,7 @@ export default function Dashboard() {
 
   const Section = [
     {
-      title: "Card",
+      title: "Most Popular",
       data: cardData
     },
     {
@@ -41,18 +41,18 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="flex flex-wrap md:container overflow-y-auto md:pb-32  h-[calc(100vh-2rem)] bg-gray-200">
+    <div className="flex flex-wrap md:container overflow-y-auto md:pb-32  h-[calc(100vh-2rem)] bg-gray-800">
 
 {
   Section.map(section => (
-    <div name="main div " className='bg-gray-900 w-full mt-5  rounded-lg'>
+    <div name="main div " className='dark:bg-dark w-full mt-5 shadow-lg bg-white rounded-lg'>
      
-      <div name="div for the text" className="flex md:container  w-full flex-row  justify-around md:justify-between">
-        <Typography color="white" size="5xl" className="text-center  items-center">
+      <div name="div for the text" className="flex md:container  w-full flex-row mt-3  justify-around md:justify-between">
+        <Typography color="" size="18xl" className="text-center text-3xl dark:text-white  items-center">
           {section.title}
           </Typography>
-          <Typography color="white" size="5xl" className="text-center ">
-          Seel All
+          <Typography color="pink" size="5xl" className="text-center ">
+          Show All
           </Typography>
 
       </div>

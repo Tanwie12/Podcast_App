@@ -17,6 +17,7 @@ import {
   MagnifyingGlassIcon as MagnifyingGlassCircleIcon,
   SunIcon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 export function Sidebar() {
   const sidebarvalue = useSelector((state) => state.sidebar.value);
@@ -46,20 +47,28 @@ console.log(sidebarvalue+"for real")
             <ListItemPrefix>
               <PresentationChartBarIcon className="h-5 w-5" />
             </ListItemPrefix>
+            <Link to="/dashboard">
             Dashboard
+            </Link>
           </ListItem>
           <ListItem>
             <ListItemPrefix>
               <MagnifyingGlassCircleIcon className="h-5 w-5" />
             </ListItemPrefix>
+            <Link to="/search">
             Search
+            </Link>
+           
           </ListItem>
 
           <ListItem>
             <ListItemPrefix>
               <StarIcon className="h-5 w-5" />
             </ListItemPrefix>
+            <Link to="/favorites">
             Favorites
+            </Link>
+           
           </ListItem>
           <hr className="my-2 border-blue-gray-50" />
           <ListItem>

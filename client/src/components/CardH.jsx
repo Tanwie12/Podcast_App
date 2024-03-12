@@ -11,7 +11,7 @@ import {
   } from "@material-tailwind/react";
 import { useSelector } from "react-redux";
 import { selectCard } from "../store/Sidebarslice";
-import { PlaceOutlined } from "@mui/icons-material";
+
 import { PlayIcon } from "@heroicons/react/24/outline";
    
   export function HorizontalCard() {
@@ -79,7 +79,7 @@ import { PlayIcon } from "@heroicons/react/24/outline";
             </Typography>
             <PlayIcon className="h-4 w-4" />
           </div>
-          <a href="#" className="inline-block">
+          <a href="https://google.com" className="inline-block">
             <Button variant="text" className="flex items-center gap-2">
               Learn More
               <svg

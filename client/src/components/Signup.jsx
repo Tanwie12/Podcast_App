@@ -1,12 +1,12 @@
 import React from "react";
-import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
-import {LockClosedIcon, EnvelopeIcon, MagnifyingGlassPlusIcon as MailIcon } from "@heroicons/react/24/solid";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure,  Input,} from "@nextui-org/react";
+import {EnvelopeIcon,  } from "@heroicons/react/24/solid";
 import { LockIcon } from "./LockIcon";
-import { Button as MButton } from "@material-tailwind/react";
+
 import { Typography } from "@mui/material";
 export default function Signup() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-  const [modalPlacement, setModalPlacement] = React.useState("auto");
+ 
   return (
     <>
       <Typography

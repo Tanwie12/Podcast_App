@@ -9,8 +9,7 @@ import {
   Checkbox,
   Button,
 } from "@material-tailwind/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+
 import Signup from "./Signup";
 
 export function LoginCard() {

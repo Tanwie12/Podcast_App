@@ -1,17 +1,15 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+
   Typography,
-  Button,
-  IconButton,
-  Card,
+  
   
 } from "@material-tailwind/react";
 import {  Button as NButton } from "@nextui-org/react";
 import { DrawerDefault } from "./Drawerbar";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
-import { LoginCard } from "./Signin";
+
 import { Outlet,Link } from "react-router-dom";
 
 export function NavBar1() {

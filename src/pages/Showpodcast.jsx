@@ -4,9 +4,12 @@ import CardComponent from '../components/Card';
 import { useSelector } from 'react-redux';
 // import { selectComedy, selectCard, selectCrime, selectHorror, selectNews, selectSport } from '../store/Sidebarslice';
 import { selectNews } from '../store/Sidebarslice';
+import { useParams } from 'react-router-dom';
 
 
 export default function Showpodcast() {
+  const params=useParams()
+  console.log(params)
   // const cardData = useSelector(selectCard);
   // const crimeData = useSelector(selectCrime);
   const newsData = useSelector(selectNews);
@@ -30,7 +33,7 @@ export default function Showpodcast() {
      
       <div name="div for the text" className="flex md:container  w-full flex-row mt-3  justify-around md:justify-between">
         <Typography color="" size="18xl" className="text-center text-3xl dark:text-white  items-center">
-          {section.title}
+          {params.podcastId}
           </Typography>
          
 

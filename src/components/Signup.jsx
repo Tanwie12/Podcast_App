@@ -30,7 +30,7 @@ export default function Signup() {
               <ModalHeader className="flex flex-col gap-1">Sign Up</ModalHeader>
               <ModalBody>
                 <Input
-                autoFocus
+               
                 endContent={
                   <EnvelopeIcon className=" w-5 h-5 text-default-400 pointer-events-none flex-shrink-0" />
                 }

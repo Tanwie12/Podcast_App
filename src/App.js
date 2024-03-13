@@ -48,7 +48,7 @@ export default function App() {
         <Route path="/podcast" element={<Podcast/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/search" element={<Search/>}/>
-        <Route path="/Showpodcast" element={<Showpodcast/>}/>
+        <Route path="/Showpodcast/:podcastId" element={<Showpodcast/>}/>
         </Routes>
           
         <div className=" flex justify-center">

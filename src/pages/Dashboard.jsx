@@ -3,7 +3,8 @@ import React from 'react';
 import CardComponent from '../components/Card';
 import { useSelector } from 'react-redux';
 import { selectComedy, selectCard, selectCrime, selectHorror, selectNews, selectSport } from '../store/Sidebarslice';
-
+import Showpodcast from './Showpodcast';
+import {Link} from "react-router-dom"
 
 export default function Dashboard() {
   const cardData = useSelector(selectCard);
@@ -39,6 +40,7 @@ export default function Dashboard() {
       data: comedyData
     }
   ];
+  const podcastId=1
 
   return (
     <div className="flex flex-wrap md:container overflow-y-auto md:pb-32  h-[calc(100vh-2rem)] bg-gray-800">
@@ -48,11 +50,15 @@ export default function Dashboard() {
     <div name="main div " className='dark:bg-dark w-full mt-5 shadow-lg bg-white rounded-lg'>
      
       <div name="div for the text" className="flex md:container  w-full flex-row mt-3  justify-around md:justify-between">
-        <Typography color="" size="18xl" className="text-center text-3xl dark:text-white  items-center">
+        <Typography color="" size="18xl" className="text-center md:text-3xl dark:text-white  items-center">
           {section.title}
           </Typography>
-          <Typography color="pink" size="5xl" className="text-center ">
+          <Typography color="pink" size="5xl" className="text-center" as="a">
+         
+          <Link to={`/ShowPodcast/${section.title}`}>
           Show All
+
+          </Link>
           </Typography>
 
       </div>
@@ -63,7 +69,6 @@ export default function Dashboard() {
           ))
         }
       </div>
-      
       </div>
   ))
 

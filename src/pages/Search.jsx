@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { selectCategories } from '../store/Sidebarslice'
 
 import Scard from '../components/Scard'
+import { Link } from 'react-router-dom'
 export default function Search() {
     const category=useSelector(selectCategories)
   return (
@@ -18,7 +19,13 @@ export default function Search() {
     </Typography>
 
    <div className='flex md:flex-row justify-center  overflow-y-auto md:overscroll-y-none flex-wrap  md:flex-wrap gap-3 md:justify-normal p-16'>
-   { category.map((data)=>( <Scard data={data} className=""/>))
+   { category.map((data)=>( 
+   <Link to={`/Showpodcast/${data.title}`}>
+   <Scard data={data} className=""/>
+   </Link>
+   
+   
+   ))
      }
    </div> 
     </div>

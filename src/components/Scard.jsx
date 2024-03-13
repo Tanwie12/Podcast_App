@@ -2,12 +2,14 @@ import React from "react";
 import { Card, CardBody, Image } from "@nextui-org/react";
 import { Typography } from "@material-tailwind/react";
 
+
 export default function Scard({ data }) {
   const item = data;
 
   return (
     <div className="transform transition w-36 duration-300 hover:shadow-xl hover:scale-105">
-      <Card shadow="sm" isPressable onPress={() => console.log("item pressed")}>
+    
+      <Card shadow="sm" isPressable>
         <CardBody className="relative overflow-visible p-0">
           <div className="w-full h-32 relative">
             <Image
@@ -27,6 +29,7 @@ export default function Scard({ data }) {
           </div>
         </CardBody>
       </Card>
+    
     </div>
   );
 }

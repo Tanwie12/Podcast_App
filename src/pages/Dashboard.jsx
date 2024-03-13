@@ -3,7 +3,6 @@ import React from 'react';
 import CardComponent from '../components/Card';
 import { useSelector } from 'react-redux';
 import { selectComedy, selectCard, selectCrime, selectHorror, selectNews, selectSport } from '../store/Sidebarslice';
-import Showpodcast from './Showpodcast';
 import {Link} from "react-router-dom"
 
 export default function Dashboard() {
@@ -40,7 +39,7 @@ export default function Dashboard() {
       data: comedyData
     }
   ];
-  const podcastId=1
+ 
 
   return (
     <div className="flex flex-wrap md:container overflow-y-auto md:pb-32  h-[calc(100vh-2rem)] bg-gray-800">

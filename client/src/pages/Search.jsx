@@ -17,7 +17,7 @@ export default function Search() {
       Browse 
     </Typography>
 
-   <div className='flex md:flex-row  overflow-y-auto md:overscroll-y-none flex-wrap  md:flex-wrap gap-3 md:justify-normal p-16'>
+   <div className='flex md:flex-row justify-center  overflow-y-auto md:overscroll-y-none flex-wrap  md:flex-wrap gap-3 md:justify-normal p-16'>
    { category.map((data)=>( <Scard data={data} className=""/>))
      }
    </div> 

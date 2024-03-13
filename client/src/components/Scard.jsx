@@ -6,7 +6,7 @@ export default function Scard({ data }) {
   const item = data;
 
   return (
-    <div className="transform transition w-32 duration-300 hover:shadow-xl hover:scale-105">
+    <div className="transform transition w-36 duration-300 hover:shadow-xl hover:scale-105">
       <Card shadow="sm" isPressable onPress={() => console.log("item pressed")}>
         <CardBody className="relative overflow-visible p-0">
           <div className="w-full h-32 relative">
@@ -16,7 +16,7 @@ export default function Scard({ data }) {
               height={'2rem'}
               
               alt={item.title}
-              className=" h-32 w-32"
+              className=" h-36 w-36"
               src={item.img}
             />
             <div className="absolute top-2 left-0 right-8 flex justify-center items-center">

@@ -20,7 +20,7 @@ export default function Scard({ data }) {
               src={item.img}
             />
             <div className="absolute top-2 left-0 right-8 flex justify-center items-center">
-              <Typography className="text-white text-center p-2 z-10">
+              <Typography className=" text-white text-center p-2 z-10">
                 {item.title}
               </Typography>
             </div>

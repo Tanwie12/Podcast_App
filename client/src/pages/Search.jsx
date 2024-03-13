@@ -13,8 +13,8 @@ export default function Search() {
         <Input icon={<MagnifyingGlassIcon className="h-5 w-5 rounded-lg" />} label="Search" placeholder='search here' />
       </div>
       <div className="flex flex-col  w-full md:pl-5 pb-32 overflow-y-auto    shadow-blue-gray-900/5 "> 
-    <Typography className='text-3xl flex-1 mt-2 text-gray-400 dark:text-white' >
-      Browse 
+    <Typography className='text-2xl md:text-3xl flex-1 mt-2 dark:text-white' >
+      Browse All
     </Typography>
 
    <div className='flex md:flex-row justify-center  overflow-y-auto md:overscroll-y-none flex-wrap  md:flex-wrap gap-3 md:justify-normal p-16'>

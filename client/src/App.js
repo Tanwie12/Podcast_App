@@ -17,6 +17,7 @@ import Podcast from "./pages/Podcast";
 
 import Favorites from "./pages/Favorites";
 import Search from "./pages/Search";
+import Showpodcast from "./pages/Showpodcast";
 
 
 
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/podcast" element={<Podcast/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/search" element={<Search/>}/>
+        <Route path="/Showpodcast" element={<Showpodcast/>}/>
         </Routes>
           
         <div className=" flex justify-center">

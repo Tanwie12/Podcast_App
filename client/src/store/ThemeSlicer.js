@@ -1,5 +1,5 @@
 // suing redux toolktit create avariable that manages the theme
-import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+import { createSlice, } from "@reduxjs/toolkit";
 
 const initialState = {
   theme: window.matchMedia("(prefers-color-scheme: dark)").matches

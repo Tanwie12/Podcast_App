@@ -26,9 +26,6 @@ export default function App() {
 
   // Get current theme from Redux store
   const Theme = useSelector((state) => state.theme.theme);
-
-  console.log(Theme);
-
   return (
     <NextUIProvider>
       
@@ -45,10 +42,10 @@ export default function App() {
         <Routes>
           <Route index element={<Dashboard/>}/> 
         <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/podcast" element={<Podcast/>}/>
+        <Route path="/podcast/:podcastId" element={<Podcast/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/search" element={<Search/>}/>
-        <Route path="/Showpodcast/:podcastId" element={<Showpodcast/>}/>
+        <Route path="/Showpodcast/:ShowpodcastId" element={<Showpodcast/>}/>
         </Routes>
           
         <div className=" flex justify-center">

@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 
 export default function Showpodcast() {
   const params=useParams()
-  console.log(params)
+ 
   // const cardData = useSelector(selectCard);
   // const crimeData = useSelector(selectCrime);
   const newsData = useSelector(selectNews);

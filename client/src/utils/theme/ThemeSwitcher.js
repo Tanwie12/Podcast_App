@@ -10,7 +10,7 @@ export default function ThemeSwitcher() {
   const dispatch = useDispatch();
 
   const toggleTheme = React.useCallback(() => {
-    console.log("hiihihi")
+    
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     dispatch(Themechanger(newTheme))

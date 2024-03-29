@@ -6,17 +6,17 @@ import {
 import { Button as NButton } from "@nextui-org/react";
 import { DrawerDefault } from "./Drawerbar";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet,} from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar } from "@nextui-org/react";
-import { useDispatch } from "react-redux";
-import { useLogoutMutation } from "../slices/userApiSlice";
+// import { useDispatch } from "react-redux";
+// import { useLogoutMutation } from "../slices/userApiSlice";
 
 export function NavBar1() {
   const { userInfo } = useSelector((state) => state.auth);
-  const navigate=useNavigate()
-  const dispatch=useDispatch()
-  const [logout]=useLogoutMutation()
+  // const navigate=useNavigate()
+  // const dispatch=useDispatch()
+  // const [logout]=useLogoutMutation()
 const handlePress=()=>{
   localStorage.removeItem("userInfo")
   window.location.reload()

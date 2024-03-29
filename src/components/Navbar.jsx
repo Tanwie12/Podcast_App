@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Navbar,
   Typography,
@@ -20,9 +20,9 @@ export function NavBar1() {
   const [logoutM]=useLogoutMutation()
 const handlePress= async()=>{
   try {
-    await logoutM().unwrap()
     dispatch(logout())
-    navigate('/login')
+   navigate('/login')
+    await logoutM().unwrap()
   } catch (error) {
     console.log(error)
   }
@@ -30,6 +30,7 @@ const handlePress= async()=>{
 }
   
   
+
 
   return (
     <div className="max-h-[768px] w-[calc(100%+48px)] bg-background">

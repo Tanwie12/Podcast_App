@@ -1,5 +1,5 @@
 import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-const baseQuery=fetchBaseQuery({baseUrl:'http://localhost:5000'});
+const baseQuery=fetchBaseQuery({baseUrl:'https://podcast-app-uxb4.onrender.com'});
 
 export const apiSlice=createApi({
     baseQuery,

@@ -1,5 +1,7 @@
 import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-const baseQuery=fetchBaseQuery({baseUrl:'https://podcast-app-uxb4.onrender.com'});
+const cyclic="https://impossible-waders-calf.cyclic.app/"
+// const onrender='https://podcast-app-uxb4.onrender.com'
+const baseQuery=fetchBaseQuery({baseUrl:cyclic});
 
 export const apiSlice=createApi({
     baseQuery,

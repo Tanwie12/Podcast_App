@@ -9,7 +9,7 @@ export default function Scard({ data }) {
   return (
     <div className="transform transition w-36 duration-300 hover:shadow-xl hover:scale-105">
     
-      <Card shadow="sm" isPressable>
+      <Card shadow="sm">
         <CardBody className="relative overflow-visible p-0">
           <div className="w-full h-32 relative">
             <Image

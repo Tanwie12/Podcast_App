@@ -3,6 +3,9 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 const initialState = {
     value: true,
 }
+const FavoriteValue={
+    value:false
+}
 const cardData = [
     {
     id: nanoid(),
@@ -108,7 +111,7 @@ const cardData = [
 ]
 const Comedy=[{
     id: nanoid(),
-    title: "Wooden House, Florida",
+    title: "Bruno mike",
     description: "hello",
     image: "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     author: "Author name",
@@ -308,17 +311,29 @@ const sideBarSlice = createSlice({
     name: 'sideBar',
     initialState,
     reducers: {
-            changeValue: (state, action) => {
+          changeValue: (state, action) => {
                 state.value = action.payload;
             },
         }
     })
+const FavoriteValueSlice=createSlice({
+    name: 'FavoriteValue',
+    initialState:{FavoriteValue},
+    reducers: {
+        changeFavoriteValue: (state, action) => {
+                state.value = action.payload;
+                console.log("state of value____"+state.value)
+            },
+        }
 
+})
+export const { changeFavoriteValue } = FavoriteValueSlice.actions;
     export const { changeValue } = sideBarSlice.actions;
     export const { Updatecard } = cardSlice.actions;
     export const { Updatecomedy } = comedySlice.actions;
     export const { Updatehorror } = horrorSlice.actions;
     export const { UpdateNews } = newsSlice.actions;
+    export const selectFavoriteValue=state=>state.FavoriteValue
     export const selectCard = state => state.card.cardData;
     export const selectComedy = state => state.comedy.Comedy;
     export const selectHorror = state => state.horror.Horror;
@@ -337,5 +352,6 @@ const sideBarSlice = createSlice({
     export const sportReducer= sportSlice.reducer;
     export const favoriteReducer=favoriteSlice.reducer;
     export const cateoriesReducer=categoriesSlice.reducer;
+    export const FavoriteValueReducer=FavoriteValueSlice.reducer
 
   console.log(selectCard)

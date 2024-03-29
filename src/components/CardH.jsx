@@ -14,7 +14,7 @@ import { selectCard } from "../store/Sidebarslice";
 
 import { PlayIcon } from "@heroicons/react/24/outline";
    
-  export function HorizontalCard() {
+  export function HorizontalCard({params}) {
     const [liked, setLiked] = React.useState(false);
     const data=useSelector(selectCard)
     
@@ -42,7 +42,7 @@ import { PlayIcon } from "@heroicons/react/24/outline";
             <HeartIcon className={liked ? "text-red-500" : "text-gray-500"} />
           </NButton>
           <Typography variant="h6" color="gray" className="mb-4 uppercase">
-            startups
+            {params.podcastId}
           </Typography>
           <Typography variant="h4" color="blue-gray" className="mb-2">
             Lyft launching cross-platform service this week

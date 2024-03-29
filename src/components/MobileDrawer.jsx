@@ -29,32 +29,41 @@ export function MobileDrawer() {
             <Typography variant="h5">Podstream</Typography>
           </div>
           <List className="dark:text-gray-500">
-            <ListItem>
-              <ListItemPrefix>
-                <PresentationChartBarIcon className="h-5 w-5" />
-              </ListItemPrefix>
-              <Link to="/dashboard">
-            Dashboard
-            </Link>
-          </ListItem>
+          <Link to="/dashboard">
           <ListItem>
+       
+            <ListItemPrefix>
+              <PresentationChartBarIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            
+            Dashboard
+          
+          </ListItem>
+          </Link>
+          <Link to="/search">
+          <ListItem>
+         
             <ListItemPrefix>
               <MagnifyingGlassCircleIcon className="h-5 w-5" />
             </ListItemPrefix>
-            <Link to="/search">
+           
             Search
-            </Link>
+        
            
           </ListItem>
-
+          </Link>
+          <Link to="/favorites">
           <ListItem>
+         
             <ListItemPrefix>
               <StarIcon className="h-5 w-5" />
             </ListItemPrefix>
-            <Link to="/favorites">
+           
             Favorites
-            </Link>
-            </ListItem>
+           
+           
+          </ListItem>
+          </Link>
             <hr className="my-2 border-blue-gray-50" />
             <ListItem>
               <ListItemPrefix>

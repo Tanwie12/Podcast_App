@@ -1,4 +1,7 @@
 import React from "react"; 
+import {ToastContainer} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Route, Routes } from "react-router-dom";
 // Import NextUI components and hooks
 import { NextUIProvider } from "@nextui-org/react";
@@ -22,6 +25,7 @@ import Showpodcast from "./pages/Showpodcast";
 
 
 
+
 export default function App() {
 
   // Get current theme from Redux store
@@ -31,6 +35,7 @@ export default function App() {
       
       {/* Apply theme class to outer div */}
       <div className={Theme}>
+        <ToastContainer/>
         <BrowserRouter>
         <div className=" dark:bg-dark bg-background/60 w-screen h-screen flex overflow-hidden ">
           <Sidebar/>
@@ -41,10 +46,11 @@ export default function App() {
           </div>
         <Routes>
           <Route index element={<Dashboard/>}/> 
+
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/podcast/:podcastId" element={<Podcast/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
-        <Route path="/search" element={<Search/>}/>
+        <Route path="/search" element={<Search/>}/>      
         <Route path="/Showpodcast/:ShowpodcastId" element={<Showpodcast/>}/>
         </Routes>
           

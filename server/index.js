@@ -1,15 +1,20 @@
 const express=require('express');
-const bodyParser=require('body-parser');
 const app=express();
+const cors=require('cors');
 const cookieParser = require('cookie-parser');
 const db = require('./config/db');
 const { notFound, errorHandler } = require('./middlerware/errorMiddleware');
 require('dotenv').config();
 
 
+// Parse JSON bodies (for JSON-encoded data)
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({extended:true}));
+// Parse URL-encoded bodies (for form data)
+app.use(express.urlencoded({ extended: true }));
+
 app.use(cookieParser());
+app.use(cors());
 
 
 // routes

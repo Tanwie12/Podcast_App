@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Navbar,
   Typography,
@@ -6,7 +6,7 @@ import {
 import { Button as NButton } from "@nextui-org/react";
 import { DrawerDefault } from "./Drawerbar";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet,useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
@@ -18,18 +18,16 @@ export function NavBar1() {
   const navigate=useNavigate()
   const dispatch=useDispatch()
   const [logoutM]=useLogoutMutation()
-const handlePress= async()=>{
-  try {
-    dispatch(logout())
-   navigate('/login')
+const handlePress=async()=>{
+  try{
     await logoutM().unwrap()
-  } catch (error) {
-    console.log(error)
+    dispatch(logout())
+    navigate('/')
+  }catch(err){
+    console.log(err)
   }
-  
 }
-  
-  
+
 
 
   return (
@@ -90,4 +88,4 @@ const handlePress= async()=>{
       <Outlet />
     </div>
   );
-              }
+}

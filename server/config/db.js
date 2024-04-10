@@ -8,7 +8,7 @@ const connectDB = async () => {
             useUnifiedTopology: true,
          
         });
-        console.log(`MongoDB Connected: ${conn.connection.host}`);
+        console.log(`MongoDB Connected: ${process.env.MONGO_URI}`);
     } catch (err) {
         console.error(`Error connecting to MongoDB: ${err.message}`);
         // Instead of exiting the process, you could throw the error

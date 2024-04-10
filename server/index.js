@@ -5,7 +5,8 @@ const cookieParser = require('cookie-parser');
 const db = require('./config/db');
 const { notFound, errorHandler } = require('./middlerware/errorMiddleware');
 require('dotenv').config();
-
+const OnlineUrl=process.env.ORIGIN_O
+const OfflineUrl=process.env.ORIGIN_F
 
 // Parse JSON bodies (for JSON-encoded data)
 app.use(express.json());
@@ -14,7 +15,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
-app.use(cors());
+const origin = process.env.NODE_ENV === "development" 
+  ? process.env.ORIGIN_F
+  : process.env.ORIGIN_O;
+app.use(cors({
+  origin: `${origin}`,
+  credentials: true  
+}));
+
+
 
 
 // routes

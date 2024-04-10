@@ -27,7 +27,9 @@ const handlePress=async()=>{
     console.log(err)
   }
 }
-
+const profileHandler=()=>{
+  navigate(`/profile`)
+}
 
 
   return (
@@ -51,7 +53,7 @@ const handlePress=async()=>{
             </Typography>
           ) : null}
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-x-1">
+            <div className="flex items-center gap-x-1 mr-2">
               {userInfo ? (
                 <Dropdown placement="bottom-end">
                   <DropdownTrigger>
@@ -63,11 +65,11 @@ const handlePress=async()=>{
                     />
                   </DropdownTrigger>
                   <DropdownMenu aria-label="Profile Actions" variant="flat">
-                    <DropdownItem key="profile" className="h-14 gap-2">
+                    <DropdownItem key="profile" className="h-14 gap-2"onPress={profileHandler}>
                       <p className="font-semibold">Signed in as</p>
                       <p className="font-semibold">{userInfo.email}</p>
                     </DropdownItem>
-                    <DropdownItem key="settings">My Profile</DropdownItem>
+                    <DropdownItem key="profile" onPress={profileHandler}>My Profile</DropdownItem>
                     <DropdownItem key="team_settings">Uploads</DropdownItem>
                    
                     <DropdownItem key="logout" color="danger" onPress={handlePress}>

@@ -21,6 +21,8 @@ import Podcast from "./pages/Podcast";
 import Favorites from "./pages/Favorites";
 import Search from "./pages/Search";
 import Showpodcast from "./pages/Showpodcast";
+import Profile from "./pages/Profile";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 
 
@@ -50,7 +52,10 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/podcast/:podcastId" element={<Podcast/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
-        <Route path="/search" element={<Search/>}/>      
+        <Route path="/search" element={<Search/>}/>
+        <Route path="" element={<PrivateRoutes/>}>
+        <Route path="/profile" element={<Profile/>}/>  
+        </Route>    
         <Route path="/Showpodcast/:ShowpodcastId" element={<Showpodcast/>}/>
         </Routes>
           

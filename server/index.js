@@ -19,7 +19,7 @@ const origin = process.env.NODE_ENV === "development"
   ? process.env.ORIGIN_F
   : process.env.ORIGIN_O;
 app.use(cors({
-  origin: `${origin}`,
+  origin: `https://podcastfinal.netlify.app`,
   credentials: true  
 }));
 console.log(origin)

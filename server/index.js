@@ -22,7 +22,7 @@ app.use(cors({
   origin: `${origin}`,
   credentials: true  
 }));
-
+console.log(origin)
 
 
 

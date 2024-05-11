@@ -12,6 +12,7 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar } from "@
 import { useDispatch } from "react-redux";
 import { useLogoutMutation } from "../slices/userApiSlice";
 import { logout } from "../slices/authSlice";
+// import SiderMenu from "./Sider";
 
 export function NavBar1() {
   const { userInfo } = useSelector((state) => state.auth);
@@ -33,14 +34,15 @@ const profileHandler=()=>{
 
 
   return (
-    <div className="max-h-[768px] w-[calc(100%+48px)] bg-background">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full dark:bg-gray-500 rounded-none px-4 py-2 lg:px-8 lg:py-4">
+    <div className="max-h-[768px] bg-none w-[calc(100%+48px)]">
+      <Navbar className="sticky  shadow-lg border- top-0 z-10 h-max max-w-full bg-inherit  rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-primary">
           <Typography
             as="a"
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
+            
             <DrawerDefault />
           </Typography>
           {userInfo ? (

@@ -8,9 +8,11 @@ import { useLoginMutation } from '../slices/userApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 import Signup from "./Signup";
+import {Input as InputA} from 'antd'
 
 
 export function LoginCard() {
+  
   const navigate=useNavigate();
   const dispatch=useDispatch();
   const [login,]=useLoginMutation();
@@ -59,7 +61,7 @@ const onSubmit = async (values, actions) => {
   };
   
   return (
-    <form autoComplete='off' onSubmit={handleSubmit}>
+    <form autoComplete='off' autoFocus='off' onSubmit={handleSubmit}>
     <Card className="w-full md:w-96 mt-2">
       <CardHeader
         variant="gradient"
@@ -95,7 +97,19 @@ const onSubmit = async (values, actions) => {
                             className={errors.email && touched.email ? 'border-red-500' : ''}
                         />
                         {errors.email && touched.email && <p className='text-red-500'>{errors.email}</p>}
-                        <Input
+                        <InputA.Password
+                        label="Password"
+                        size="large"
+                        type="password"
+                        name='password'
+                        value={values.password}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={errors.password && touched.password ? 'border-red-500' : ''}
+                        
+                        
+                        placeholder="input password" />
+                        {/* <Input
                             label="Password"
                             size="lg"
                             type="password"
@@ -104,7 +118,7 @@ const onSubmit = async (values, actions) => {
                             onChange={handleChange}
                             onBlur={handleBlur}
                             className={errors.password && touched.password ? 'border-red-500' : ''}
-                        />
+                        /> */}
                         {errors.password && touched.password && <p className='text-red-500'>{errors.password}</p>}
                         
                         <div className="-ml-2.5">

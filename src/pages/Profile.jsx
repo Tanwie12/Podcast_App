@@ -16,6 +16,7 @@ import { signupSchema } from "../schemas";
 
 import { Typography } from "@mui/material";
 import { useUpdateProfileMutation } from "../slices/userApiSlice";
+import Favorites from "./Favorites";
 
 export default function Signup() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
@@ -76,6 +77,35 @@ useEffect(() => {
 
   return (
     <>
+
+    <div className="flex mt-4 flex-col h-screen md:container items-center gap-10 justify-between w-full   bg-transparent dark:bg-dark">
+      <div className="flex-div">
+        {
+          userInfo.image ?
+          <img alt="mike" className="w-20 h-20 rounded-full" src={userInfo.image} />
+          :
+          <Typography variant="h5" className="text-center dark:text-white">no image</Typography>
+        }
+        <div className="">
+          <Typography variant="h5" className="mt-1 text-center dark:text-white">
+            {userInfo.name}
+          </Typography>
+          <Typography variant="h5" className="mt-1 dark:text-white text-center">
+            {userInfo.email}
+          </Typography>
+        </div>
+        
+      </div>
+      <div className="bg-orange-500 flex-div">
+          <Typography variant="h5" className="text-center dark:text-white">
+            your uploads
+          </Typography>
+          <Button color="primary">
+            Upload
+          </Button>
+      </div>
+      <Favorites/>
+    </div>
       <Typography
               as="a"
               href="#signup"

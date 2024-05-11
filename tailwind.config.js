@@ -17,6 +17,8 @@ module.exports = withMT({
     container: {
       
       padding: '2rem',
+      maring:'auto',
+      items: 'center',
      
 			screens: {
 				'2xl': '1400px',
@@ -25,7 +27,7 @@ module.exports = withMT({
     
     extend: {
       colors:{
-        dark:'#15171E',
+        dark:'#202023',
         primary:"#be1adb",
     text_primary:"#F2F3F4",
     text_secondary:"#b1b2b3",

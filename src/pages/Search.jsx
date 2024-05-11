@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 export default function Search() {
     const category=useSelector(selectCategories)
   return (
-    <div className='flex flex-col dark:bg-dark overflow-y-auto  h-screen md:container'>
+    <div className='flex flex-col dark:bg-dark overflow-y-auto  h-screen '>
         <div className="rounded-lg w-full flex justify-center container my-5 md:p-16">
         <Input icon={<MagnifyingGlassIcon className="h-5 w-5 rounded-lg" />} label="Search" placeholder='search here' />
       </div>

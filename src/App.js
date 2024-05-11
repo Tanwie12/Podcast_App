@@ -28,6 +28,7 @@ import PrivateRoutes from "./components/PrivateRoutes";
 
 
 
+
 export default function App() {
 
   // Get current theme from Redux store
@@ -39,10 +40,10 @@ export default function App() {
       <div className={Theme}>
         <ToastContainer/>
         <BrowserRouter>
-        <div className=" dark:bg-dark bg-background/60 w-screen h-screen flex overflow-hidden ">
+        <div className=" dark:bg-[#18181B] bg-gray-300 w-screen h-screen flex overflow-hidden ">
           <Sidebar/>
          
-        <div className="flex-1 h-screen  border border-green-200">
+        <div className="flex-1 h-screen">
           <div className="  md:mr-5 mr-8">
           <NavBar1/>
           </div>
@@ -54,8 +55,10 @@ export default function App() {
         <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="" element={<PrivateRoutes/>}>
-        <Route path="/profile" element={<Profile/>}/>  
-        </Route>    
+        <Route path="/profile" element={<Profile/>}/> 
+        
+        </Route> 
+           
         <Route path="/Showpodcast/:ShowpodcastId" element={<Showpodcast/>}/>
         </Routes>
           

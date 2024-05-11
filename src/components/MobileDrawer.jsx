@@ -15,7 +15,7 @@ export function MobileDrawer() {
   
   return (
     <>
-      <IconButton variant="text" size="lg" onClick={isDrawerOpen ? closeDrawer : openDrawer}>
+      <IconButton variant="text" className="dark:text-white" size="lg" onClick={isDrawerOpen ? closeDrawer : openDrawer}>
         {isDrawerOpen ? (
           <XMarkIcon className="h-8 w-8 stroke-2" />
         ) : (
@@ -23,7 +23,7 @@ export function MobileDrawer() {
         )}
       </IconButton>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
-        <Card className="h-[calc(100vh-2rem)] w-full text-blue-600 max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+        <Card className="h-[calc(100vh-1rem)] w-full text-blue-600 max-w-[calc(100vw-2rem)] p-4 shadow-xl  shadow-blue-gray-900/5">
           <div className="mb-2 flex items-center gap-4 p-4 text-primary">
             <img src="https://docs.material-tailwind.com/img/logo-ct-dark.png" alt="brand" className="h-8 w-8" />
             <Typography variant="h5">Podstream</Typography>

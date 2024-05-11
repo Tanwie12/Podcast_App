@@ -42,13 +42,13 @@ export default function Dashboard() {
  
 
   return (
-    <div className="flex flex-wrap md:container overflow-y-auto md:pb-32  h-[calc(100vh-2rem)] bg-gray-800">
+    <div className="flex flex-wrap md:px-8 overflow-y-auto md:pb-32  h-[calc(100vh-2rem)] ">
 
 {
   Section.map(section => (
     <div name="main div " className='dark:bg-dark w-full mt-5 shadow-lg bg-white rounded-lg'>
      
-      <div name="div for the text" className="flex md:container  w-full flex-row mt-3  justify-around md:justify-between">
+      <div name="div for the text" className="flex md:px-4 w-full flex-row mt-3  justify-around md:justify-between">
         <Typography color="" size="18xl" className="text-center md:text-3xl dark:text-white  items-center">
           {section.title}
           </Typography>
@@ -61,7 +61,7 @@ export default function Dashboard() {
           </Typography>
 
       </div>
-      <div name="div for the cards" className="flex flex-wrap md:container w-full pt-4 mb-10 md:space-x-5 md:justify-normal justify-center">
+      <div name="div for the cards" className="flex flex-wrap md:px-4 w-full pt-4 mb-10 md:space-x-5 md:justify-normal justify-center">
         {
           section.data.map(data => (  
            <CardComponent data={data}/>
